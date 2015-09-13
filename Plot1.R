@@ -1,5 +1,5 @@
 #first we read  the entire dataset and store it in pwdata, we are using sep=";" as data is seperated by ;
-pwdata <- read.csv(file="./data/household_power_consumption.txt", header = TRUE, sep = ";", as.is = TRUE)
+pwdata <- read.table(file="./data/household_power_consumption.txt", header = TRUE, sep = ";", na.strings = "?")
 #the data is cleaned a little by converting date character to date object
 pwdata$Date <- as.Date(pwdata$Date, "%d/%m/20%y")
 #the data is subsetted to the just the days we want to analyse
