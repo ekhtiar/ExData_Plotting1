@@ -10,9 +10,9 @@ selpwdata$Time <- paste (selpwdata$Date, selpwdata$Time, sep = " ")
 selpwdata$Time <- strptime(selpwdata$Time, "%Y-%m-%d %H:%M:%S")
 #defining the png output
 png(filename = "./Plot2.png", width=480, height=480)
-#first the plot function is used to create the grid, pch= " " is used as we want to generate line grapth without points in the next step
+#plot function is used to create the grid, pch= " " is used as we want to generate line grapth without points in the next step
 plot(selpwdata$Time, selpwdata$Global_active_power, pch=" ", xlab = "Days",ylab="Global active power (kilowatts)")
-#generating line graph for Global_active_powerwith color as blue
+#generating line graph for Global_active_power
 lines(selpwdata$Time, selpwdata$Global_active_power)
 #mandatory housekeeping
 dev.off()
