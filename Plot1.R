@@ -13,6 +13,6 @@ selpwdata$Global_active_power <- as.numeric(selpwdata$Global_active_power)
 #defining the png output
 png(filename = "./Plot1.png", width=480, height=480)
 #plot the histogram
-hist(selpwdata$Global_active_power, breaks = 6, col = "red", xlim =c(0,6), ylim = c(0,1200), main = "Global Active Power", ylab = "Frequency", xlab = "Global Active Power (kilowatt)")
+hist(selpwdata$Global_active_power, breaks = 12, col = "red", xlim =c(0,6), ylim = c(0,1200), main = "Global Active Power", ylab = "Frequency", xlab = "Global Active Power (kilowatt)")
 #mandatory housekeeping
 dev.off()
